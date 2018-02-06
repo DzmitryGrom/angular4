@@ -7,11 +7,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class UsersComponent implements OnInit {
 
-  @Input() u;
-
+  @Input() user;
+  change = false;
 
   constructor() { }
-
+  onClick() {
+    this.change = true;
+    console.log(this.change);
+  }
   ngOnInit() {
 
 
