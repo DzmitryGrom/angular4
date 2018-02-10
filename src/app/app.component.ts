@@ -10,7 +10,7 @@ import {UserService} from "./user.service";
 export class AppComponent {
 
   users: any;
-
+  searchStr = '';
   constructor(private userService: UserService){
     //this.users = this.userService.users
     this.userService.getUser().subscribe(users => {
