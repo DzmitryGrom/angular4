@@ -6,17 +6,8 @@ import {UserService} from "./user.service";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   providers: [UserService]
+
 })
 export class AppComponent {
-
-  users: any;
-  searchStr = '';
-  constructor(private userService: UserService){
-    //this.users = this.userService.users
-    this.userService.getUser().subscribe(users => {
-      this.users = users;
-      console.log(users.len)
-    });
-  }
-
+  constructor(private userService: UserService){}
 }

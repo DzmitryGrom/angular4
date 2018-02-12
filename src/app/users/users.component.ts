@@ -13,7 +13,6 @@ export class UsersComponent implements OnInit {
   constructor() { }
   onClick() {
     this.change = true;
-    console.log(this.change);
   }
   ngOnInit() {
 
