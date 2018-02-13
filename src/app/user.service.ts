@@ -4,13 +4,12 @@ import 'rxjs/add/operator/map';
 import {Observable} from "rxjs";
 
 @Injectable()
-export class UserService {
-
+export class UsersService {
     size = 8;
     constructor(private http: HttpClient){}
 
-
     getUser(){
+
         return this.http.get('https://randomuser.me/api/?inc=gender,name,picture,location&results='+this.size+'&nat=gb')
             .map((response: Response) => {
                 const body = response;
@@ -31,7 +30,7 @@ export class UserService {
 
     setSize(size){
         this.size = size;
-        console.log('пришло')
+
     }
 
 }
